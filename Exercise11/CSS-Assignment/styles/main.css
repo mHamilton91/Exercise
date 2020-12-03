@@ -1,3 +1,105 @@
 * {
     box-sizing:border-box;
 }
+
+body {
+    max-width: 1050px;
+    font-family: sans-serif;
+    margin: 0 auto;
+}
+
+nav {
+    background-color: #AA0000;
+    text-align: center;
+    padding: 5px;
+    border-radius: 25px;
+    margin-top: 6px;
+    margin-bottom: 18px;
+}
+
+nav a {
+    color: #FFF;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 25px;
+}
+
+header {
+    margin: 10px 0;
+}
+
+#largeNavImg {
+    float: left;
+    margin-right: 20px;
+}
+
+.sectionTitle {
+    border-top: 1px solid #AA0000;
+    border-bottom: 1px solid #AA0000;
+    padding: 20px 0;
+    text-align: center;
+    color: #AA0000;
+    clear: both;
+}
+
+#imgGallary {
+    list-style: none;
+}
+
+#imgGallary > li {
+    float: left;
+    margin: 10px 10px;
+}
+
+article {
+    border-bottom: 1px solid #AA0000;
+    display: inline-block;
+    /* width: 68% */
+}
+
+#recentPosts {
+    float: left;
+    width:68%;
+    padding-right: 20px;
+    border-right: 1px solid #AA0000;
+}
+
+article img {
+    float: left;
+    margin: 10px;
+}
+
+article h2 {
+    color: #AA0000;
+}
+
+aside {
+    float: right;
+    width: 31%;
+    text-align: center;
+}
+
+aside img {
+    padding: 5px;
+}
+
+footer {
+    clear: both;
+    padding: 15px 0;
+}
+
+#footerHead {
+    display: inline;
+}
+
+#footerLinks {
+    float: right;
+    display: inline;
+}
+
+#footerLinks a {
+    text-decoration: none;
+    padding: 0 8px;
+    color: #AA0000;
+    font-size: 18px;
+}
