@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width:450px;
+    margin:45px auto;
+}
+
+label {
+    display: block;
+    font-size: 1.3em;
+}
+
+.inputGroup {
+    margin-bottom: 30px;
+    height: 45px;
+    width: 100%;
+    font-size: 1.3em;
+    padding-left: 10px;
+}
+
+#accept {
+    margin-bottom: 20px;
+    margin-right: 10px;
+    
+}
+
+#acceptLabel {
+    font-size: 1.3em;
+}
+
+.control-panel {
+    text-align: center;
+}
+
+.control-panel > input {
+    font-size: 1.3em;
+}
+
+.invalid {
+    background-color: #fcd2d2;
+    outline: 1px solid #F00;
+}
+
+.message {
+    margin: 20px;
+    font-size: 2em;
+}

@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+
+    <head>
+        <title>Exercise 14</title>
+        <link rel="stylesheet" href="styles/main.css">
+    </head>
+
+    <body>
+       <section id="message">
+
+        </section>
+        <section class="inputs">
+            <label for="userName">User Name</label>
+            <input type="text" id="userName" class="inputGroup" name="userName" placeholder="User Name">
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" class="inputGroup" name="email" placeholder="Email Address">
+
+            <label for="pass">Password</label>
+            <input type="password" id="pass" class="inputGroup" name="pass" placeholder="Password">
+
+            <label for="timeZone">Time Zone</label>
+            <select id="timeZone" class="inputGroup">
+                <option value="none"></option>
+                <option value="east">Eastern</option>
+                <option value="cent">Central</option>
+                <option value="mount">Mountain</option>
+                <option value="pacf">Pacific</option>
+            </select>
+
+            <input type="checkbox" id="accept" name="accept" value="accept"><span id="acceptLabel">Accept Terms and Conditions</span><br>
+       </section>
+         <section class="control-panel">
+            <input type="button" value="Submit" id="btnSubmit"/>
+            <input type="button" value="Reset" id="btnReset"/>
+        </section>
+        
+        <script src="scripts/main.js"></script>
+    </body>
+
+</html>
