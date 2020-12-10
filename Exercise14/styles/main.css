@@ -43,7 +43,7 @@ label {
     outline: 1px solid #F00;
 }
 
-.message {
-    margin: 20px;
-    font-size: 2em;
+#message {
+    margin-bottom: 20px;
+    font-size: 1.2em;
 }

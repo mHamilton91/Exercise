@@ -5,18 +5,16 @@ var errorMsg = []
 
 
 function invalidInput(elem) {
+    elem.classList.add('invalid')
     switch(elem.type) {
         default:
-            elem.classList.add('invalid')
-            errorMsg.push(`${elem.placeholder} Invalid`)
+            errorMsg.push(`*${elem.placeholder} Invalid`)
             break;
         case 'select-one':
-            elem.classList.add('invalid')
-            errorMsg.push(`No Time Zone Selected`)
+            errorMsg.push(`*No Time Zone Selected`)
             break;
         case 'checkbox':
-            elem.classList.add('invalid')
-            errorMsg.push('Terms and Conditions not Accepted')
+            errorMsg.push('*Terms and Conditions not Accepted')
             break;
     }
 }
@@ -24,20 +22,29 @@ function invalidInput(elem) {
 
 function resetInputs(elem) {
     elem.value = ''
-    if (elem.type == 'checkbox') {
-        elem.checked == false
-        elem.classList.remove('invalid')
-    } else {
-        elem.classList.remove('invalid')
+    elem.classList.remove('invalid')
+    switch(elem.type) {
+        case 'select-one':
+            elem.value = 'none'
+            break;
+        case 'checkbox':
+            elem.checked = false
+            break;
     }
     errorMsg = []
     message.innerHTML = ''
 }
 
 
-function errorOutput(msg) {
+function errorOutput(msg, errNum = -1) {
     var errorList = errorMsg.join('<br>')
-    msg.innerHTML = errorList
+    if(errNum === 0) {
+        msg.innerHTML = "Thank you for filling out our form"
+        msg.style.color = '#000'
+    } else {
+        msg.innerHTML = errorList
+        msg.style.color = '#F00'
+    }
 }
 
 
@@ -58,7 +65,7 @@ submit.addEventListener('click', function() {
     select.value != 'none' ? select.classList.remove('invalid') : invalidInput(select)
     check.checked ? check.classList.remove('invalid') : invalidInput(check)
 
-    errorMsg.length == 0 ? message.innerHTML = "Thank you for filling out our form" : errorOutput(message)
+    errorMsg.length == 0 ? errorOutput(message, 0) : errorOutput(message)
 })
 
 
