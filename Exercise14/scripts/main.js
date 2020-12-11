@@ -39,8 +39,9 @@ function resetInputs(elem) {
 function errorOutput(msg, errNum = -1) {
     var errorList = errorMsg.join('<br>')
     if(errNum === 0) {
-        msg.innerHTML = "Thank you for filling out our form"
+        msg.innerHTML = "Form has been submitted"
         msg.style.color = '#000'
+        msg.style.fontSize = '2em'
     } else {
         msg.innerHTML = errorList
         msg.style.color = '#F00'
